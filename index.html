@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Данила Хамит - Портфолио</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #1e3c72;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background: #e7f0ff;
+            color: #1e3c72;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .interactive-box {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+
+        button {
+            background-color: #2a5298;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1e3c72;
+        }
+
+        #statusText {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивті дизайн (Мобильді құрылғылар үшін) */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Данила Хамит</h1>
+        <p>IT & Web Development студенті</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Мен туралы</a></li>
+                <li><a href="#skills">Дағдылар</a></li>
+                <li><a href="#projects">Жобалар</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Мен туралы</h2>
+            <p>Сәлем! Мен компьютерлік ғылымдар мен бағдарламалау бойынша білім алып жатырмын. Заманауи веб-технологиялармен, дерекқорлармен және пайдаланушыға ыңғайлы веб-интерфейстерді әзірлеумен айналысамын.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Дағдылар мен Технологиялар</h2>
+            <div class="skills-list">
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git / GitHub</span>
+            </div>
+
+            <div class="interactive-box">
+                <p>Батырманы басып, мәртебені тексеріңіз:</p>
+                <button id="checkBtn">Мәртебені көрсету</button>
+                <p id="statusText"></p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Байланыс</h2>
+            <p>Жобалар мен ынтымақтастық бойынша GitHub репозиторийі арқылы хабарласа аласыз.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Данила Хамит. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // JS Интерактивті элемент
+        const btn = document.getElementById('checkBtn');
+        const statusText = document.getElementById('statusText');
+
+        btn.addEventListener('click', () => {
+            statusText.textContent = '✓ Онлайн: Жоба белсенді түрде дамып жатыр!';
+            btn.style.backgroundColor = '#2e7d32';
+        });
+    </script>
+</body>
+</html>
